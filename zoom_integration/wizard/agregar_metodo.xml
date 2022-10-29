@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_agregar_metodo_envio_view_form" model="ir.ui.view">
+        <field name="name">sale.agregar.metodo.envio.form</field>
+        <field name="model">sale.order.zoom</field>
+        <field name="arch" type="xml">
+            <form string="Agregar Metodo de envio">
+                <group>
+                    <group>
+                        <field name="metodo"/>
+                        <field name="ciudad_destinatario"/>
+                        
+                        <field name="oficina_retirar"/>
+                        <field name="ciudad_remitente" string="Localidad"/>
+                        <field name="modalidad_tarifa"/>
+                        <field name="tipo_envio"/>
+                        
+                        
+                        <field name="persona_contacto"/>
+                        <field name="rif_ci_pa"/>
+                        <field name="celular"/>
+                        <field name="telefono"/>
+                    </group>
+                    <group>
+                        <field name="coste"/>
+                        <field name="mansaje"/>
+                        
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" type="object" string="Obtener Tarifa" name="obtener_tarifa"
+                                icon="fa-pencil-square-o">
+                            </button>
+                        </div>
+                        
+                    </group>
+                </group>
+                <footer>
+                    <button name="guardar" string="Guardar" type="object" class="oe_highlight"/>
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!--record id="sale_agregar_metodo_envio_action" model="ir.actions.act_window">
+        <field name="name">Enter Promotion or Coupon Code</field>
+        <field name="res_model">sale.coupon.apply.code</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="sale_coupon_apply_code_view_form"/>
+     </record-->
+</odoo>

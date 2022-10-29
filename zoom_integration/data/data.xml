@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data noupdate="1">
+    <!--TIPOS DE TARIFA-->
+		
+        <record id="getTipoTarifa1" model="zoom.gettipotarifa">
+		    <field name="codigo">1</field>
+		    <field name="name">COD</field>  
+		</record>
+
+        <record id="getTipoTarifa2" model="zoom.gettipotarifa">
+		    <field name="codigo">2</field>
+		    <field name="name">COD</field>  
+		</record>
+
+        <record id="getTipoTarifa3" model="zoom.gettipotarifa">
+		    <field name="codigo">3</field>
+		    <field name="name">COD</field>  
+		</record>
+
+
+    <!--TIPOS DE TARIFA FIN-->
+
+
+
+
+
+
+
+
+        <!--MODALIDAD DE TARIFA-->
+
+		<record id="getModalidadTarifa1" model="zoom.getmodalidadtarifa">
+		    <field name="codigo">1</field>
+		    <field name="name">RETIRAR POR OFICINA</field>
+		</record>
+
+        
+		<record id="getModalidadTarifa2" model="zoom.getmodalidadtarifa">
+		    <field name="codigo">2</field>
+		    <field name="name">PUERTA A PUERTA</field>
+		</record>
+
+        <!--MODALIDAD DE TARIFA FIN-->
+		        
+
+
+
+
+
+
+
+
+
+
+
+        <!--CIUDAD-->
+		<record id="getCiudadesTarifa1" model="zoom.getciudadestarifa">
+		    <field name="code">25</field>
+		    <field name="name">ACARIGUA</field>
+		    <field name="nombre_estado">PORTUGUESA</field>
+		</record>
+
+        <record id="getCiudadesTarifa2" model="zoom.getciudadestarifa">
+		    <field name="code">24</field>
+		    <field name="name">ANACO</field>
+		    <field name="nombre_estado">ANZOATEGUI</field>
+		</record>
+
+        <record id="getCiudadesTarifa3" model="zoom.getciudadestarifa">
+		    <field name="code">68</field>
+		    <field name="name">BARCELONA</field>
+		    <field name="nombre_estado">ANZOATEGUI</field>
+		</record>
+
+        <record id="getCiudadesTarifa4" model="zoom.getciudadestarifa">
+		    <field name="code">33</field>
+		    <field name="name">BARINAS</field>
+		    <field name="nombre_estado">BARINAS</field>
+		</record>
+
+        <record id="getCiudadesTarifa5" model="zoom.getciudadestarifa">
+		    <field name="code">44</field>
+		    <field name="name">BARQUISIMETO</field>
+		    <field name="nombre_estado">LARA</field>
+		</record>
+
+        <record id="getCiudadesTarifa6" model="zoom.getciudadestarifa">
+		    <field name="code">29</field>
+		    <field name="name">CABIMAS</field>
+		    <field name="nombre_estado">ZULIA</field>
+		</record>
+
+        <record id="getCiudadesTarifa7" model="zoom.getciudadestarifa">
+		    <field name="code">2</field>
+		    <field name="name">CALABOZO</field>
+		    <field name="nombre_estado">GUARICO</field>
+		</record>
+
+        <record id="getCiudadesTarifa8" model="zoom.getciudadestarifa">
+		    <field name="code">19</field>
+		    <field name="name">CARACAS</field>
+		    <field name="nombre_estado">DISTRITO CAPITAL</field>
+		</record>
+
+        <record id="getCiudadesTarifa9" model="zoom.getciudadestarifa">
+		    <field name="code">20</field>
+		    <field name="name">CARUPANO</field>
+		    <field name="nombre_estado">SUCRE</field>
+		</record>
+
+        <record id="getCiudadesTarifa10" model="zoom.getciudadestarifa">
+		    <field name="code">425</field>
+		    <field name="name">CATIA LA MAR</field>
+		    <field name="nombre_estado">VARGAS</field>
+		</record>
+
+        <record id="getCiudadesTarifa11" model="zoom.getciudadestarifa">
+		    <field name="code">26</field>
+		    <field name="name">CHARALLAVE</field>
+		    <field name="nombre_estado">MIRANDA</field>
+		</record>
+
+        <record id="getCiudadesTarifa12" model="zoom.getciudadestarifa">
+		    <field name="code">11</field>
+		    <field name="name">CIUDAD BOLIVAR</field>
+		    <field name="nombre_estado">BOLIVAR</field>
+		</record>
+
+        <record id="getCiudadesTarifa13" model="zoom.getciudadestarifa">
+		    <field name="code">28</field>
+		    <field name="name">CIUDAD OJEDA</field>
+		    <field name="nombre_estado">ZULIA</field>
+		</record>
+
+        <record id="getCiudadesTarifa14" model="zoom.getciudadestarifa">
+		    <field name="code">12</field>
+		    <field name="name">CORO</field>
+		    <field name="nombre_estado">FALCON</field>
+		</record>
+
+        <record id="getCiudadesTarifa15" model="zoom.getciudadestarifa">
+		    <field name="code">10</field>
+		    <field name="name">CUMANA</field>
+		    <field name="nombre_estado">SUCRE</field>
+		</record>
+
+        <record id="getCiudadesTarifa16" model="zoom.getciudadestarifa">
+		    <field name="code">30</field>
+		    <field name="name">EL TIGRE</field>
+		    <field name="nombre_estado">ANZOATEGUI</field>
+		</record>
+
+        <record id="getCiudadesTarifa17" model="zoom.getciudadestarifa">
+		    <field name="code">32</field>
+		    <field name="name">EL VIGIA</field>
+		    <field name="nombre_estado">MERIDA</field>
+		</record>
+
+        <record id="getCiudadesTarifa18" model="zoom.getciudadestarifa">
+		    <field name="code">43</field>
+		    <field name="name">GUANARE</field>
+		    <field name="nombre_estado">PORTUGUESA</field>
+		</record>
+
+        <record id="getCiudadesTarifa19" model="zoom.getciudadestarifa">
+		    <field name="code">8</field>
+		    <field name="name">GUARENAS</field>
+		    <field name="nombre_estado">MIRANDA</field>
+		</record>
+
+        <record id="getCiudadesTarifa20" model="zoom.getciudadestarifa">
+		    <field name="code">21</field>
+		    <field name="name">LOS TEQUES</field>
+		    <field name="nombre_estado">MIRANDA</field>
+		</record>
+
+        <record id="getCiudadesTarifa21" model="zoom.getciudadestarifa">
+		    <field name="code">6</field>
+		    <field name="name">MARACAIBO</field>
+		    <field name="nombre_estado">ZULIA</field>
+		</record>
+
+        <record id="getCiudadesTarifa22" model="zoom.getciudadestarifa">
+		    <field name="code">3</field>
+		    <field name="name">MARACAY</field>
+		    <field name="nombre_estado">ARAGUA</field>
+		</record>
+
+        <record id="getCiudadesTarifa23" model="zoom.getciudadestarifa">
+		    <field name="code">3</field>
+		    <field name="name">MARACAY</field>
+		    <field name="nombre_estado">ARAGUA</field>
+		</record>
+
+        <record id="getCiudadesTarifa24" model="zoom.getciudadestarifa">
+		    <field name="code">22</field>
+		    <field name="name">MATURIN</field>
+		    <field name="nombre_estado">MONAGAS</field>
+		</record>
+
+        <record id="getCiudadesTarifa25" model="zoom.getciudadestarifa">
+		    <field name="code">18</field>
+		    <field name="name">MERIDA</field>
+		    <field name="nombre_estado">MERIDA</field>
+		</record>
+
+        <record id="getCiudadesTarifa26" model="zoom.getciudadestarifa">
+		    <field name="code">15</field>
+		    <field name="name">PORLAMAR</field>
+		    <field name="nombre_estado">NUEVA ESPARTA</field>
+		</record>
+
+        <record id="getCiudadesTarifa27" model="zoom.getciudadestarifa">
+		    <field name="code">35</field>
+		    <field name="name">PUERTO AYACUCHO</field>
+		    <field name="nombre_estado">AMAZONAS</field>
+		</record>
+
+        <record id="getCiudadesTarifa28" model="zoom.getciudadestarifa">
+		    <field name="code">31</field>
+		    <field name="name">PUERTO CABELLO</field>
+		    <field name="nombre_estado">CARABOBO</field>
+		</record>
+
+        <record id="getCiudadesTarifa29" model="zoom.getciudadestarifa">
+		    <field name="code">14</field>
+		    <field name="name">PUERTO ORDAZ</field>
+		    <field name="nombre_estado">BOLIVAR</field>
+		</record>
+
+        <record id="getCiudadesTarifa30" model="zoom.getciudadestarifa">
+		    <field name="code">13</field>
+		    <field name="name">PUNTO FIJO</field>
+		    <field name="nombre_estado">FALCON</field>
+		</record>
+
+        <record id="getCiudadesTarifa31" model="zoom.getciudadestarifa">
+		    <field name="code">16</field>
+		    <field name="name">SAN ANTONIO DEL TACHIRA</field>
+		    <field name="nombre_estado">TACHIRA</field>
+		</record>
+
+        <record id="getCiudadesTarifa32" model="zoom.getciudadestarifa">
+		    <field name="code">1</field>
+		    <field name="name">SAN CARLOS</field>
+		    <field name="nombre_estado">COJEDES</field>
+		</record>
+
+        <record id="getCiudadesTarifa33" model="zoom.getciudadestarifa">
+		    <field name="code">37</field>
+		    <field name="name">SAN FELIPE</field>
+		    <field name="nombre_estado">YARACUY</field>
+		</record>
+
+        <record id="getCiudadesTarifa34" model="zoom.getciudadestarifa">
+		    <field name="code">36</field>
+		    <field name="name">SAN FERNANDO</field>
+		    <field name="nombre_estado">APURE</field>
+		</record>
+
+
+        <record id="getCiudadesTarifa35" model="zoom.getciudadestarifa">
+		    <field name="code">39</field>
+		    <field name="name">SAN JUAN DE LOS MORROS</field>
+		    <field name="nombre_estado">GUARICO</field>
+		</record>
+
+
+        <record id="getCiudadesTarifa36" model="zoom.getciudadestarifa">
+		    <field name="code">366</field>
+		    <field name="name">SANTA BARBARA DEL ZULIA</field>
+		    <field name="nombre_estado">ZULIA</field>
+		</record>
+
+        <record id="getCiudadesTarifa37" model="zoom.getciudadestarifa">
+		    <field name="code">4</field>
+		    <field name="name">VALENCIA</field>
+		    <field name="nombre_estado">CARABOBO</field>
+		</record>
+
+        <record id="getCiudadesTarifa38" model="zoom.getciudadestarifa">
+		    <field name="code">34</field>
+		    <field name="name">VALERA</field>
+		    <field name="nombre_estado">TRUJILLO</field>
+		</record>
+
+        <record id="getCiudadesTarifa39" model="zoom.getciudadestarifa">
+		    <field name="code">40</field>
+		    <field name="name">VALLE DE LA PASCUA</field>
+		    <field name="nombre_estado">GUARICO</field>
+		</record>
+
+
+
+        <!--FIN CIUDAD-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--Tipo Envio-->
+        <record id="getTipoEnvio1" model="zoom.gettipoenvio">
+		    <field name="codigo">D</field>
+		    <field name="name">DOCUMENTO</field>
+		</record>
+
+		<record id="getTipoEnvio2" model="zoom.gettipoenvio">
+		    <field name="codigo">M</field>
+		    <field name="name">MERCANCIA</field>
+		</record>
+
+		<!--Fin Tipo Envio-->
+		
+	</data>     
+
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="inherit_view_id_inherit_sale_order" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='note_group']" position="before">
+                    <div class="oe_right">
+                        <button name="agregar_envio" string="Agregar Envio" type="object" class="btn btn-secondary" icon="fa-"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//page[@name='other_information']" position="after">
+                    <page string="Zoom" name="Zoom">
+                        <group>
+                            <group>
+                                <field name="metodo"/>
+                                <field name="ciudad"/>
+                                <field name="oficina"/>
+                                <field name="localidad"/>
+                                <field name="sele_rif_ci_pa"/>
+                                <field name="rif_ci_pa"/>
+                                <field name="sele_celular"/>
+                                <field name="celular"/>
+                                <field name="telefono"/>
+                                <field name="costo"/>
+                            </group>
+                        </group>      
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

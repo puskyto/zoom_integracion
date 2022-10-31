@@ -6,10 +6,18 @@
         <field name="arch" type="xml">
             <form string="Parameters">
                 <p>
-                The stock will be reserved for operations waiting for availability and the reordering rules will be triggered.
+                    <group>
+                        <field name="metodo" string="Ingrese El codigo"/>
+                        <field name="mansaje"/>
+                        
+                            <button class="consulta" type="object" string="Consulta" name="obtener_tarifa"
+                                icon="fa-pencil-square-o">
+                            </button>
+                        
+                    </group>
                 </p>
                 <footer>
-                    <button name="procure_calculation" string="Run Scheduler" type="object" class="btn-primary"/>
+                    <button name="guardar" string="Guardar" type="object" class="btn-primary"/>
                     <button string="Cancel" class="btn-secondary" special="cancel" />
                 </footer>
             </form>
@@ -23,7 +31,7 @@
         <field name="target">new</field>
     </record>
 
-    <menuitem action="action_consulta_compute" id="menu_consulta_compute" parent="stock.menu_stock_root" sequence="135"/>
+    <menuitem name="Consulta Zoom" action="action_consulta_compute" id="menu_consulta_compute" parent="stock.menu_stock_root" sequence="135"/>
 
 
 </odoo>

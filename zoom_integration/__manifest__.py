@@ -31,6 +31,7 @@
         'data/data.xml',
         'wizard/agregar_metodo.xml',
         'wizard/generar_guia.xml',
+        'wizard/consulta.xml',
     ],
     
 }

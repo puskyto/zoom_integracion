@@ -3,3 +3,4 @@
 
 from . import agregar_metodo
 from . import generar_guia
+from . import consulta

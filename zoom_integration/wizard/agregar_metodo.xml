@@ -25,11 +25,9 @@
                         <field name="coste"/>
                         <field name="mansaje"/>
                         
-                        <div class="oe_button_box" name="button_box">
                             <button class="oe_stat_button" type="object" string="Obtener Tarifa" name="obtener_tarifa"
                                 icon="fa-pencil-square-o">
                             </button>
-                        </div>
                         
                     </group>
                 </group>

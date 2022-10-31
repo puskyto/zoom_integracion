@@ -62,11 +62,11 @@ class ZoomSaleOrder(models.Model):
             r = requests.get(url,json=json_data, headers=headers)
             #rs = json.loads(r)
             mensaje = json.loads(r.text)
-            self.codigo = mensaje['mensaje']
-            self.mansaje = mensaje['codrespuesta']
+            #self.codigo = mensaje['mensaje']
+            self.mansaje = mensaje['mensaje']
         except Exception as err:
                 print(err)
-        return post_request        
+        return self.show_view('Generado', self._name, 'zoom_integration.sale_agregar_metodo_envio_view_form', self.id)        
     
     
     
@@ -75,3 +75,26 @@ class ZoomSaleOrder(models.Model):
     def guardar(self):
         return True
             
+            
+    def show_view(self, name, model, id_xml, res_id=None, view_mode='tree,form', nodestroy=True, target='new'):
+        context = self._context
+        mod_obj = self.env['ir.model.data']
+        view_obj = self.env['ir.ui.view']
+        module = ""
+        view_id = self.env.ref(id_xml).id
+        if view_id:
+            view = view_obj.browse(view_id)
+            view_mode = view.type
+        ctx = context.copy()
+        ctx.update({'active_model': model})
+        res = {'name': name,
+                'view_mode': view_mode,
+                'view_id': view_id,
+                'res_model': model,
+                'res_id': res_id,
+                'nodestroy': nodestroy,
+                'target': target,
+                'type': 'ir.actions.act_window',
+                'context': ctx,
+                }
+        return res

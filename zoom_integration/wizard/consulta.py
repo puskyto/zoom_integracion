@@ -9,6 +9,7 @@ class ZoomGeneConsul(models.TransientModel):
     _name = 'generar.consulta.zoom'
 
     metodo = fields.Char()
+    mensaje = fields.Char()
     
     ciudad = fields.Char()
     oficina = fields.Char()

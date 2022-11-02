@@ -45,10 +45,10 @@ class ZoomSaleOrder(models.Model):
         headers = {"Content-Type": "application/json"}
         url = 'http://sandbox.grupozoom.com/baaszoom/public/canguroazul/CalcularTarifa'
         data = {}
-        req_values = {'tipo_tarifa': self.metodo, 
-                'modalidad_tarifa': self.modalidad_tarifa,
-                'ciudad_remitente': self.ciudad_remitente,
-                'ciudad_destinatario': self.ciudad_destinatario,
+        req_values = {'tipo_tarifa': self.metodo.code, 
+                'modalidad_tarifa': self.modalidad_tarifa.code,
+                'ciudad_remitente': self.ciudad_remitente.cod,
+                'ciudad_destinatario': self.ciudad_destinatario.cod,
                 'oficina_retirar': self.oficina_retirar,
                 'cantidad_piezas': 0,
                 'peso': 0, 
@@ -64,9 +64,10 @@ class ZoomSaleOrder(models.Model):
             mensaje = json.loads(r.text)
             #self.codigo = mensaje['mensaje']
             self.mansaje = mensaje['mensaje']
-            coste_list = len(mensaje['entidadRespuesta']['total'])
-            for i in coste_list:
-                self.coste = len(i['total'])
+            self.coste = len(mensaje['entidadRespuesta'][7])
+            
+            with r as total:
+                costo_dic = json.load(total)
         except Exception as err:
                 print(err)
         return self.show_view('Generado', self._name, 'zoom_integration.sale_agregar_metodo_envio_view_form', self.id)        

@@ -7,13 +7,13 @@
             <form string="Parameters">
                 <p>
                     <group>
-                        <field name="metodo" string="Ingrese El codigo"/>
-                        <field name="mansaje"/>
-                        
-                            <button class="consulta" type="object" string="Consulta" name="obtener_tarifa"
-                                icon="fa-pencil-square-o">
-                            </button>
-                        
+                        <field name="Tipo_busqueda" string="Tipo de Busqueda"/>
+                        <field name="codigo" string="Tipo de Busqueda"/>
+                        <field name="codigo_cliente" string="Codigo de Cliente"/>
+                        <field name="mensaje"/>
+                        <button class="consulta" type="object" string="Consulta" name="consulta"
+                            icon="fa-pencil-square-o">
+                        </button>
                     </group>
                 </p>
                 <footer>

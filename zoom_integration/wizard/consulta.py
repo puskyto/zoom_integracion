@@ -3,15 +3,19 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
 from odoo.osv import expression
+import requests
+import json
 
 
 class ZoomGeneConsul(models.TransientModel):
     _name = 'generar.consulta.zoom'
 
-    metodo = fields.Char()
-    mensaje = fields.Char()
+    Tipo_busqueda = fields.Selection([('1', 'busqueda por N de envio ZOOM'),('2', 'buscar por referencia')])
+    Tipo_busqueda_int = fields.Integer()
+    codigo = fields.Char()
+    codigo_cliente = fields.Char()
     
-    ciudad = fields.Char()
+    mensaje = fields.Char()
     oficina = fields.Char()
     localidad = fields.Char()
     sele_rif_ci_pa = fields.Char()
@@ -22,6 +26,24 @@ class ZoomGeneConsul(models.TransientModel):
     costo = fields.Float()
 
     def consulta(self):
+        headers = {"Content-Type": "application/json"}
+        url = 'http://sandbox.grupozoom.com/baaszoom/public/canguroazul/getInfoTracking'
+        data = {}
+        req_values = {'Tipo_busqueda': 1, 
+                'codigo': self.codigo,
+                'codigo_cliente': self.codigo_cliente}
+        data['data'] = [req_values]
+        json_data = req_values
+        post_request = None
+        #headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+        try:
+            r = requests.get(url,json=json_data, headers=headers)
+            #rs = json.loads(r)
+            mensaje = json.loads(r.text)
+            #self.codigo = mensaje['mensaje']
+            self.mansaje = mensaje['mensaje']
+        except Exception as err:
+                print(err)
         return self.show_view('Consulta Generada', self._name, 'zoom_integration.view_consulta_compute_wizard', self.id)
         #raise UserError(_("Nothing to print."))
     

@@ -8,9 +8,9 @@
                 <p>
                     <group>
                         <field name="Tipo_busqueda" string="Tipo de Busqueda"/>
-                        <field name="codigo" string="Tipo de Busqueda"/>
+                        <field name="codigo" string="Numero de Guia"/>
                         <field name="codigo_cliente" string="Codigo de Cliente"/>
-                        <field name="mensaje"/>
+                        <field name="mansaje"/>
                         <button class="consulta" type="object" string="Consulta" name="consulta"
                             icon="fa-pencil-square-o">
                         </button>

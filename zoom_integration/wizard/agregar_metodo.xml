@@ -7,13 +7,16 @@
             <form string="Agregar Metodo de envio">
                 <group>
                     <group>
-                        <field name="metodo"/>
+                        <field name="metodo" string="Tipo de Tarifa"/>
                         <field name="ciudad_destinatario"/>
                         
                         <field name="oficina_retirar"/>
                         <field name="ciudad_remitente" string="Localidad"/>
                         <field name="modalidad_tarifa"/>
                         <field name="tipo_envio"/>
+                        <field name="cantidad_piezas"/>
+                        <field name="peso"/>
+
                         
                         
                         <field name="persona_contacto"/>

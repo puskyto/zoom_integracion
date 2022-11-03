@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//group[@name='note_group']" position="before">
                     <div class="oe_right">
-                        <button name="agregar_envio" string="Agregar Envio" type="object" class="btn btn-secondary" icon="fa-"/>
+                        <button name="agregar_envio" string="Agregar Envio Zoom" type="object" class="btn btn-secondary" icon="fa-"/>
                     </div>
                 </xpath>
 

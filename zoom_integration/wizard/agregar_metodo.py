@@ -10,7 +10,7 @@ import json
 class ZoomSaleOrder(models.Model):
     _name = 'sale.order.zoom'
 
-    coste = fields.Integer()
+    coste = fields.Char()
     mansaje = fields.Char()
 
     metodo = fields.Many2one('zoom.gettipotarifa')
@@ -19,6 +19,9 @@ class ZoomSaleOrder(models.Model):
     ciudad_destinatario = fields.Many2one('zoom.getciudadestarifa')
     tipo_envio = fields.Many2one('zoom.gettipoenvio')
     oficina_retirar = fields.Integer()
+    cantidad_piezas = fields.Char()
+    peso = fields.Char()
+    
     
     persona_contacto = fields.Integer()
     sele_rif_ci_pa = fields.Char()
@@ -45,31 +48,35 @@ class ZoomSaleOrder(models.Model):
         headers = {"Content-Type": "application/json"}
         url = 'http://sandbox.grupozoom.com/baaszoom/public/canguroazul/CalcularTarifa'
         data = {}
-        req_values = {'tipo_tarifa': self.metodo.code, 
-                'modalidad_tarifa': self.modalidad_tarifa.code,
-                'ciudad_remitente': self.ciudad_remitente.cod,
-                'ciudad_destinatario': self.ciudad_destinatario.cod,
-                'oficina_retirar': self.oficina_retirar,
-                'cantidad_piezas': 0,
-                'peso': 0, 
-                'valor_mercancia': 0,
-                'valor_declarado': 0}
+        req_values = {'tipo_tarifa': 1, 
+                    'modalidad_tarifa': 2,
+                    'ciudad_remitente': 1,
+                    'ciudad_destinatario': 19,
+                    'oficina_retirar': 46,
+                    'cantidad_piezas': 1,
+                    'peso': 1, 
+                    'valor_mercancia': 0,
+                    'valor_declarado': 0}
         data['data'] = [req_values]
         json_data = req_values
         post_request = None
+        
         #headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        try:
-            r = requests.get(url,json=json_data, headers=headers)
-            #rs = json.loads(r)
-            mensaje = json.loads(r.text)
-            #self.codigo = mensaje['mensaje']
-            self.mansaje = mensaje['mensaje']
-            self.coste = len(mensaje['entidadRespuesta'][7])
+        #try:
+        coste = 0.0
+        r = requests.get(url,json=json_data, headers=headers)
+        #rs = json.loads(r)
+        mensaje = json.loads(r.text)
+        #self.codigo = mensaje['mensaje']
+        self.mansaje = mensaje['mensaje']
+        #prueba = json.loads(r)
+        #self.coste = prueba['entidadRespuesta']['total']
+        print(len(mensaje['entidadRespuesta']))
+        coste = mensaje['entidadRespuesta']['total']
+        self.coste = coste
             
-            with r as total:
-                costo_dic = json.load(total)
-        except Exception as err:
-                print(err)
+        #except Exception as err:
+        #    print(err)
         return self.show_view('Generado', self._name, 'zoom_integration.sale_agregar_metodo_envio_view_form', self.id)        
     
     

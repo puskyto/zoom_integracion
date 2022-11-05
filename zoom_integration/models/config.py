@@ -4,54 +4,46 @@ import code
 from odoo import models, fields, api, _, tools
 from odoo.exceptions import UserError
 
-class ZoomConfig(models.Model):
-    _name = 'zoom.config'
+#class ZoomConfig(models.Model):
+ #   _inherit = 'delivery.carrier'
 
-    name = fields.Char()
-    proveedor = fields.Char()
-    n_integracion = fields.Char()
-    envio = fields.Char()
-    facturacion = fields.Char()
-    margen = fields.Char()
-    gratis = fields.Char()
-
-    usuario = fields.Char()
-    passw = fields.Char()
-    token = fields.Char()
-    tipo_servicio = fields.Char()
-    peso = fields.Char()
-    tamano = fields.Char()
+  #  clave = fields.Char()
+   # codigo_cliente = fields.Char()
     
-    
+   # def actualizar_estados():
+        
+    #    return access_zoom_config,zoom.config,model_zoom_config,sales_team.group_sale_salesman,1,1,1,0
     
 class getTipoTarifa(models.Model):
     _name = 'zoom.gettipotarifa'
     
-    codigo = fields.Char()
     name = fields.Char()
-    a_m = fields.Many2one('sale.order.zoom')
+    code = fields.Char()
     
 class getModalidadTarifa(models.Model):
     _name = 'zoom.getmodalidadtarifa'
     
-    codigo = fields.Char()
     name = fields.Char()
-    a_m = fields.Many2one('sale.order.zoom')
+    code = fields.Char()
     
 class getCiudadesTarifa(models.Model):
     _name = 'zoom.getciudadestarifa'
     
-    code = fields.Char()
     name = fields.Char()
+    code = fields.Char()
     nombre_estado = fields.Char()
-    a_m = fields.Many2one('sale.order.zoom')
     
-#class getPaises(models.Model):
- #   _name = 'zoom.config.getPaises'
+class getOficina(models.Model):
+    _name = 'zoom.oficinas'
+    
+    name = fields.Char()
+    code = fields.Char()
+    code_estado = fields.Char()
+    
     
 class getTipoEnvio(models.Model):
     _name = 'zoom.gettipoenvio'
     
-    codigo = fields.Char()
     name = fields.Char()
+    code = fields.Char()
     a_m = fields.Many2one('sale.order.zoom')

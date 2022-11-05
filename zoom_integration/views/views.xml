@@ -1,63 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- vista -->
-        <record model="ir.ui.view" id="zoom_conf_tree_view">
-          <field name="name">zoom.config.tree</field>
-          <field name="model">zoom.config</field>
+        <!-- vista >
+        <record id="inherit_view_id_inherit_module_name" model="ir.ui.view">
+          <field name="name">delivery.carrier.view.form.inherit</field>
+          <field name="model">delivery.carrier</field>
+          <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
           <field name="arch" type="xml">
-            <tree string="Configuracion de odoo">
-              <field name="name"/>
-              <field name="proveedor"/>
-              <field name = "n_integracion"/>
-            </tree>
-          </field>
-        </record>
-
-
-
-        <record model="ir.ui.view" id="zoom_conf_form_view">
-            <field name="name">zoom.config.form</field>
-            <field name="model">zoom.config</field>
-            <field name="arch" type="xml">
-              <form string="Configuracion de odoo">
-                <sheet>
-                  <group>
-                    <group>
-                      <field name="name"/>
-                      <field name="proveedor"/>
-                      <field name = "n_integracion"/>
-                      <field name = "facturacion" invisible="0"/>
-                      <field name = "margen" invisible="0"/>
-                      <field name = "gratis" invisible="0"/>
-                      <field name = "usuario" invisible="0"/>
-                      <field name = "passw" invisible="0"/>
-                      <field name = "token" invisible="0"/>
-                      <field name = "tipo_servicio" invisible="0"/>
-                      <field name = "peso" invisible="0"/>
-                      <field name = "tamano" invisible="0"/>
-                    </group>
-                  </group>
-              </sheet>
-              </form>
+            <field name="state_id" position="before">
+              <field name="clave"/>
+              <field name="codigo_cliente"/>    
             </field>
-          </record>
-        <!-- ACCIONES -->
-
-        <record id="zoom_integration.action_window" model="ir.actions.act_window">
-            <field name="name">Configuracion Zoom</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">zoom.config</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-        <!-- MENUS -->
-        <menuitem
-            id="zoom_conf"
-            name="Configuracion Zoom"
-            parent="sale.menu_sale_config"
-            action="zoom_integration.action_window"
-        />
+          </field>
+        </record-->
 
     </data>
 </odoo>

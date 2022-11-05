@@ -18,7 +18,7 @@ class ZoomSaleOrder(models.Model):
     ciudad_remitente = fields.Many2one('zoom.getciudadestarifa')
     ciudad_destinatario = fields.Many2one('zoom.getciudadestarifa')
     tipo_envio = fields.Many2one('zoom.gettipoenvio')
-    oficina_retirar = fields.Integer()
+    oficina_retirar = fields.Many2one('zoom.oficinas')
     cantidad_piezas = fields.Char()
     peso = fields.Char()
     
@@ -31,18 +31,16 @@ class ZoomSaleOrder(models.Model):
     telefono = fields.Char()
     
 
-    def get_tipo_tarifa(self):
-        return 1
-    def get_mod_tarifa(self):
-        return 1
-    def get_ciudades(self):
-        return 1
-    def get_oficina(self):
-        return 1
-    def get_paises(self):
-        return 1
-    def get_tipo_envio(self):
-        return 1
+  
+    
+    
+    #@api.onchange('ciudad_destinatario')
+    #def get_oficina(self):
+        
+      #  for r in self:
+        #    variable = r.env['zoom.oficinas'].search([['code_estado', '=', self.ciudad_destinatario.code]])
+        #    r.oficina_retirar = variable.name
+    
     
     def obtener_tarifa(self):
         headers = {"Content-Type": "application/json"}

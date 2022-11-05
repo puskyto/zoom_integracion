@@ -1,11 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_zoom_config,zoom.config,model_zoom_config,sales_team.group_sale_salesman,1,1,1,0
+
 access_sale_order_zoom,sale.order.zoom,model_sale_order_zoom,sales_team.group_sale_salesman,1,1,1,0
 access_stock_picking_zoom,stock.picking.zoom,model_stock_picking_zoom,sales_team.group_sale_salesman,1,1,1,0
-
-
 access_zoom_gettipotarifa,zoom.gettipotarifa,model_zoom_gettipotarifa,sales_team.group_sale_salesman,1,1,1,0
 access_zoom_getmodalidadtarifa,zoom.getmodalidadtarifa,model_zoom_getmodalidadtarifa,sales_team.group_sale_salesman,1,1,1,0
 access_zoom_getciudadestarifa,zoom.getciudadestarifa,model_zoom_getciudadestarifa,sales_team.group_sale_salesman,1,1,1,0
 access_zoom_gettipoenvio,zoom.gettipoenvio,model_zoom_gettipoenvio,sales_team.group_sale_salesman,1,1,1,0
 access_generar_consulta_zoom,generar.consulta.zoom,model_generar_consulta_zoom,sales_team.group_sale_salesman,1,1,1,0
+access_zoom_oficinas,zoom.oficinas,model_zoom_oficinas,sales_team.group_sale_salesman,1,1,1,0

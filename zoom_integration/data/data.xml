@@ -5,17 +5,17 @@
     <!--TIPOS DE TARIFA-->
 		
         <record id="getTipoTarifa1" model="zoom.gettipotarifa">
-		    <field name="codigo">1</field>
+		    <field name="code">1</field>
 		    <field name="name">COD</field>  
 		</record>
 
         <record id="getTipoTarifa2" model="zoom.gettipotarifa">
-		    <field name="codigo">2</field>
+		    <field name="code">2</field>
 		    <field name="name">COD</field>  
 		</record>
 
         <record id="getTipoTarifa3" model="zoom.gettipotarifa">
-		    <field name="codigo">3</field>
+		    <field name="code">3</field>
 		    <field name="name">COD</field>  
 		</record>
 
@@ -32,13 +32,13 @@
         <!--MODALIDAD DE TARIFA-->
 
 		<record id="getModalidadTarifa1" model="zoom.getmodalidadtarifa">
-		    <field name="codigo">1</field>
+		    <field name="code">1</field>
 		    <field name="name">RETIRAR POR OFICINA</field>
 		</record>
 
         
 		<record id="getModalidadTarifa2" model="zoom.getmodalidadtarifa">
-		    <field name="codigo">2</field>
+		    <field name="code">2</field>
 		    <field name="name">PUERTA A PUERTA</field>
 		</record>
 
@@ -316,17 +316,419 @@
 
 		<!--Tipo Envio-->
         <record id="getTipoEnvio1" model="zoom.gettipoenvio">
-		    <field name="codigo">D</field>
+		    <field name="code">D</field>
 		    <field name="name">DOCUMENTO</field>
 		</record>
 
 		<record id="getTipoEnvio2" model="zoom.gettipoenvio">
-		    <field name="codigo">M</field>
+		    <field name="code">M</field>
 		    <field name="name">MERCANCIA</field>
 		</record>
 
 		<!--Fin Tipo Envio-->
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--Oficinas-->
+		<record id="getOficina1" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM PROPUESTAS URBANAS, C.A.</field>
+			<field name="code">1220</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina2" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM REPRESENTACIONES SIGMA 256, C.A.</field>
+			<field name="code">2435</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina3" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM REPRESENTACIONES SRV 14, C.A.</field>
+			<field name="code">1625</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina4" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM SHIPNET MANZANARES</field>
+			<field name="code">1313</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina5" model="zoom.oficinas">
+		    <field name="name">ZOOM LA URBINA</field>
+			<field name="code">46</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina6" model="zoom.oficinas">
+		    <field name="name">ZOOM  MAKRO LA YAGUARA</field>
+			<field name="code">1372</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina7" model="zoom.oficinas">
+		    <field name="name">ZOOM BELLO CAMPO</field>
+			<field name="code">47</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina8" model="zoom.oficinas">
+		    <field name="name">ZOOM CDO CATIA</field>
+			<field name="code">48</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina9" model="zoom.oficinas">
+		    <field name="name">ZOOM CHACAITO I</field>
+			<field name="code">825</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina10" model="zoom.oficinas">
+		    <field name="name">ZOOM LA CALIFORNIA</field>
+			<field name="code">1257</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina11" model="zoom.oficinas">
+		    <field name="name">ZOOM PARQUE HUMBOLDT</field>
+			<field name="code">1214</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina12" model="zoom.oficinas">
+		    <field name="name">ZOOM SAN MARTIN</field>
+			<field name="code">50</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina13" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM  MORGAF INVERSIONES 777,C.A. ( LA CANDELARIA ) </field>
+			<field name="code">2709</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina14" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM CORPORACION ZANESIL, C.A</field>
+			<field name="code">3045</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina15" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM DIGITAL PARAISO</field>
+			<field name="code">2704</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina16" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM ENCOMIENDAS GALLERY 55, C.A.</field>
+			<field name="code">1127</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina17" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM GRUPO FIGUE, C.A. AV LIBERTADOR.</field>
+			<field name="code">2768</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina18" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM IMPRESION,IMAGEN Y POP 2205 C.A</field>
+			<field name="code">1193</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina19" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM INSTALL COMPUTER, C.A</field>
+			<field name="code">728</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina100" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM INVERSIONES LA GRAN FLORIDA 2304, C.A.</field>
+			<field name="code">2706</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina111" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM INVERSIONES MB33, C.A.</field>
+			<field name="code">651</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina122" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM INVERSIONES RRSS 1388, C.A (EL PARAISO)</field>
+			<field name="code">3062</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina133" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM MBE LAS MERCEDES</field>
+			<field name="code">685</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina144" model="zoom.oficinas">
+		    <field name="name">DOCUMENTO</field>
+			<field name="code">D</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina155" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM MBE MULTICENTRO EMPRESARIAL DEL ESTE</field>
+			<field name="code">730</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina166" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM MULTISERVICIOS BFP, C.A.</field>
+			<field name="code">2402</field>
+		    <field name="code_estado">19</field>
+		</record>
+
+		<record id="getOficina177" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM MULTISERVICIOS TEREMAR M.T. 2.012, C.A. ( COCHE ) </field>
+			<field name="code">1194</field>
+		    <field name="code_estado">19</field>
+		</record>
+		<!--/CCS-->
+		<!--vgrs y chrllv zl-->
+		<record id="getOficina188" model="zoom.oficinas">
+		    <field name="name">ZOOM CATIA LA MAR</field>
+			<field name="code">74</field>
+		    <field name="code_estado">425</field>
+		</record>
+
+		<record id="getOficina199" model="zoom.oficinas">
+		    <field name="name">ZOOM CHARALLAVE CIUDAD CONCORDIA</field>
+			<field name="code">54</field>
+		    <field name="code_estado">26</field>
+		</record>
+
+		<record id="getOficina1000" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM MBE CIUDAD OJEDA</field>
+			<field name="code">706</field>
+		    <field name="code_estado">28</field>
+		</record>
+
+		<record id="getOficina1111" model="zoom.oficinas">
+		    <field name="name">57</field>
+			<field name="code">57</field>
+		    <field name="code_estado">28</field>
+		</record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--zulia-->
+		<record id="getOficina1222" model="zoom.oficinas">
+		    <field name="name">ZOOM MARACAIBO</field>
+			<field name="code">82</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1333" model="zoom.oficinas">
+		    <field name="name">ZOOM 5 DE JULIO</field>
+			<field name="code">1230</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1444" model="zoom.oficinas">
+		    <field name="name">ZOOM LA CHINITA</field>
+			<field name="code">168</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1555" model="zoom.oficinas">
+		    <field name="name"></field>
+			<field name="code"></field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1666" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM  INVERSIONES ZULIMAR 05, C.A.</field>
+			<field name="code">2718</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1777" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM  INVERSIONES ZULIMAR 05, C.A.</field>
+			<field name="code">2711</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1888" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM  SULIM, C.A.</field>
+			<field name="code">2711</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina1999" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM ARA EXPRESS, C.A.</field>
+			<field name="code">3063</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina10000" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM GRUPO MAUCOVENCA, C.A.</field>
+			<field name="code">2253</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina11111" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM INVERSIONES MARAEXPRESS, C.A</field>
+			<field name="code">2980</field>
+		    <field name="code_estado">6</field>
+		</record>
+		<record id="getOficina12222" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM SERVICIOS DE ENTREGAS Y ENCOMIENDAS BRAVO C.A</field>
+			<field name="code">3314</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina13333" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM SERVICIOS V V M, C.A</field>
+			<field name="code">3269</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+		<record id="getOficina14444" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM WENDY INVERSIONES TECNO VENEZOLANAS, C.A</field>
+			<field name="code">2068</field>
+		    <field name="code_estado">6</field>
+		</record>
+
+
+		<!--/zulia-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!--/maracay-->
+
+		<record id="getOficina15555" model="zoom.oficinas">
+		    <field name="name">ZOOM MARACAY</field>
+			<field name="code">87</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina16666" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM SHIPNET MARACAY</field>
+			<field name="code">811</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina17777" model="zoom.oficinas">
+		    <field name="name">ZOOM CDO MYC</field>
+			<field name="code">1252</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina18888" model="zoom.oficinas">
+		    <field name="name">ZOOM MARACAY  AV. MIRANDA</field>
+			<field name="code">805</field>
+		    <field name="code_estado">3</field>
+		</record>
+		<record id="getOficina19999" model="zoom.oficinas">
+		    <field name="name">ZOOM PACIFICO</field>
+			<field name="code">1140</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina100000" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM  FAST DELIVERY, C.A.</field>
+			<field name="code">2466</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina111111" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM  TOTAL SOLUTIONS TOSOCA, C.A.</field>
+			<field name="code">2592</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina122222" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM CANGURO EXPRESS 911, C.A.</field>
+			<field name="code">2588</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina133333" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM CENTRO DE COPIADO Y REPRODUCCION D.M.M., C.A.</field>
+			<field name="code">2396</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina144444" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM CORPORACION CALITRI, C.A.</field>
+			<field name="code">1703</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina155555" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM EPAC 2120, C.A.</field>
+			<field name="code">3150</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina166666" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM EXPORT EXPRESS, C.A.</field>
+			<field name="code">881</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+		<record id="getOficina177777" model="zoom.oficinas">
+		    <field name="name">ALIADO ZOOM INVERSIONES CASTILLO 2010, C.A.</field>
+			<field name="code">1195</field>
+		    <field name="code_estado">3</field>
+		</record>
+
+
+		<!--/maracay-->
 	</data>     
 
 </odoo>

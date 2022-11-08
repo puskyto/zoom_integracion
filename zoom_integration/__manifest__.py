@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','account','stock', 'sale_management', 'purchase'],
+    'depends': ['base','account','stock', 'sale_management', 'purchase','website_sale'],
 
     # always loaded
     'data': [
@@ -28,6 +28,7 @@
         'views/views.xml',
         'views/sale.xml',
         'views/stock.xml',
+        'views/template.xml',
         'data/data.xml',
         'wizard/agregar_metodo.xml',
         'wizard/generar_guia.xml',

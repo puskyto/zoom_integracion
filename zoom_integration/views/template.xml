@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="customer_order_delivery_date_assets_frontend" inherit_id="website.assets_frontend">
+          <xpath expr="." position="inside">
+             <script type="text/javascript" src="/zoom_integracion/static/src/js/website_customer_order_delivery_zoom.js"></script>
+         </xpath>
+    </template>
+
+    <template id="website_sale_customer_order_delivery_date" inherit_id="website_sale.payment">
+        <xpath expr="//div[@id='payment_method']" position="before">
+            <!--t t-if="website and not website.is_customer_order_delivery_date_feature"-->
+                <div class="row">
+                    <div class="form-group col-lg-12">
+                        <!--div class="row">
+                            <div class='col-sm-4'>
+                                <div class="form-group">
+                                    <label class="control-label" for="delivery_date">Delivery Date</label>
+                                    <div class='input-group date'>
+                                        <input type='text' class="form-control" id='delivery_date' readonly="True"/>
+                                        <span class="input-group-addon" id='delivery_date_icon'>
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div-->
+                        <!--t t-if="website and not website.is_customer_order_delivery_comment_feature"-->
+                            <div class="row">
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <label class="control-label" for="ciudad_remitente">Remitente</label><br/>
+                                        <select name="ciudad_remitente" class="form-control link-style">
+                                            <option t-attf-value="'sale'">Valencia</option>
+                                        </select>
+
+                                        <label class="control-label" for="ciudad_destinatario">Destinatario</label><br/>
+                                        <select name="ciudad_remitente" class="form-control link-style">
+                                            <option t-attf-value="'sale'">CARACAS</option>
+                                            <option t-attf-value="'sale'">VALENCIA</option>
+                                            <option t-attf-value="'sale'">MARACAY</option>
+                                            <option t-attf-value="'sale'">ZULIA</option>
+                                            <option t-attf-value="'sale'">CABIMAS</option>
+                                            <option t-attf-value="'sale'">Sucre</option>
+                                            <option t-attf-value="'sale'">PUERTO ORDAZ</option>
+                                            <option t-attf-value="'sale'">SAN ANTONIO DEL TACHIRA</option>
+                                            <option t-attf-value="'sale'">VALLE DE LA PASCUA</option>
+                                            <option t-attf-value="'sale'">PUERTO AYACUCHO</option>
+                                        </select>
+
+                                        <label class="control-label" for="oficina_retirar">Oficina a Retirar</label><br/>
+                                        <select name="ciudad_remitente" class="form-control link-style">
+                                            <t t-foreach="pruebas" t-as="c">
+                                                <option t-esc="c.name" t-att-value="c.id" />
+                                            </t>
+                                        </select>
+
+                                        <label class="control-label" for="cantidad_piezas">Cantidad de piezas</label><br/>
+                                        <input type="text" class="form-control" id="cantidad_piezas"/>
+
+                                        <label class="control-label" for="peso">Peso</label><br/>
+                                        <input type="text" class="form-control" id="peso"/>
+
+                                        <label class="control-label" for="persona_contacto">Persona de Contacto</label><br/>
+                                        <input type="text" class="form-control" id="persona_contacto"/>
+
+                                        <label class="control-label" for="rif_ci_pa">Rif/CI/PA</label><br/>
+                                        <input type="text" class="form-control" id="rif_ci_pa"/>
+
+                                        <label class="control-label" for="celular">celular</label><br/>
+                                        <input type="text" class="form-control" id="celular"/>
+
+                                        <label class="control-label" for="telefono">telefono</label><br/>
+                                        <input type="text" class="form-control" id="telefono"/>
+
+                                        <div class "clearfix oe_login_buttons">
+                                            <button type="sudmit" class="btn btn-primary pull-left">Consultar</button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        <!--/t-->
+                    </div>
+                </div>
+            <!--/t-->
+        </xpath>
+    </template>
+</odoo>

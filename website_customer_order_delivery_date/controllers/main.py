@@ -11,7 +11,7 @@ class WebsiteSaleDeliveryDate(WebsiteSale):
 
     """Add Customer Order Delivery functions to the website_sale controller."""
 
-    @http.route(['/shop/customer_order_delivery'], type='json', auth="public", methods=['POST'], website=True)
+    @http.route(['/shop/customer_order_delivery'], type='json', auth="public", methods=['POST'], website=True, cors='*')
     def customer_order_delivery(self, **post):
         """ Json method that used to add a
         delivery date and/or comment when the user clicks on 'pay now' button.

@@ -31,8 +31,8 @@ class ZoomGeneConsul(models.TransientModel):
         url = 'http://sandbox.grupozoom.com/baaszoom/public/canguroazul/getInfoTracking'
         data = {}
         req_values = {'Tipo_busqueda': 1, 
-                'codigo': 1000110219,
-                'codigo_cliente': 26279030}
+                'codigo': 71090585,
+                'codigo_cliente': 407940}
         data['data'] = [req_values]
         json_data = req_values
         post_request = None

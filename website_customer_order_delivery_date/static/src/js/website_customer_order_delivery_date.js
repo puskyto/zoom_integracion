@@ -40,8 +40,11 @@ odoo.define('website_customer_order_delivery_date.payment', function(require) {
                    } else {   console.log('error')  }
                  }
                  
-            
-            
+
+
+                $(".mypanel").html(function getRandom() {
+                    return Math.random();
+                  })
             
             
             

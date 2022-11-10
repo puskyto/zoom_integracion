@@ -4,15 +4,15 @@ import code
 from odoo import models, fields, api, _, tools
 from odoo.exceptions import UserError
 
-class ZoomConfig(models.Model):
-    _inherit = 'delivery.carrier'
+#class ZoomConfig(models.Model):
+ #   _inherit = 'delivery.carrier'
 
-    clave = fields.Char()
-    codigo_cliente = fields.Char()
+  #  clave = fields.Char()
+   # codigo_cliente = fields.Char()
     
-    def actualizar_estados():
+   # def actualizar_estados():
         
-        return #access_zoom_config,zoom.config,model_zoom_config,sales_team.group_sale_salesman,1,1,1,0
+    #    return #access_zoom_config,zoom.config,model_zoom_config,sales_team.group_sale_salesman,1,1,1,0
     
 class getTipoTarifa(models.Model):
     _name = 'zoom.gettipotarifa'

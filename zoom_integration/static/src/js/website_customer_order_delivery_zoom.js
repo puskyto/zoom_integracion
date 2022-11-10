@@ -17,7 +17,8 @@ odoo.define('zoom_integration.payment', function(require) {
             var delivery_rif_ci_pa = $('#rif_ci_pa').val();
             var delivery_celular = $('#celular').val();
             var delivery_telefono = $('#telefono').val();
-            ajax.jsonRpc('/shop/delivery', 'call', {
+
+            ajax.jsonRpc('/shop/payment', 'call', {
                 'ciudad_remitente': delivery_ciudad_remitente,
                 'ciudad_destinatario': delivery_ciudad_destinatario,
                 'tipo_envio': delivery_tipo_envio,
@@ -30,6 +31,8 @@ odoo.define('zoom_integration.payment', function(require) {
                 'telefono': delivery_telefono,
             });
         });
+
+        
     });
 
 });

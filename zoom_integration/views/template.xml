@@ -28,53 +28,64 @@
                             <div class="row">
                                 <div class='col-sm-6'>
                                     <div class="form-group">
-                                        <label class="control-label" for="ciudad_remitente">Remitente</label><br/>
-                                        <select name="ciudad_remitente" class="form-control link-style">
-                                            <option t-attf-value="'sale'">Valencia</option>
-                                        </select>
+                                        <nav id="menu">
+                                            <ul>   
+                                                <optgroup label="Remitente" class="control-label" for="ciudad_remitente">Remitente</optgroup><br/>
+                                                <select name="ciudad_remitente" class="form-control link-style">
+                                                    <option t-attf-value="'Valencia'">Valencia</option>
+                                                </select>
 
-                                        <label class="control-label" for="ciudad_destinatario">Destinatario</label><br/>
-                                        <select name="ciudad_remitente" class="form-control link-style">
-                                            <option t-attf-value="'sale'">CARACAS</option>
-                                            <option t-attf-value="'sale'">VALENCIA</option>
-                                            <option t-attf-value="'sale'">MARACAY</option>
-                                            <option t-attf-value="'sale'">ZULIA</option>
-                                            <option t-attf-value="'sale'">CABIMAS</option>
-                                            <option t-attf-value="'sale'">Sucre</option>
-                                            <option t-attf-value="'sale'">PUERTO ORDAZ</option>
-                                            <option t-attf-value="'sale'">SAN ANTONIO DEL TACHIRA</option>
-                                            <option t-attf-value="'sale'">VALLE DE LA PASCUA</option>
-                                            <option t-attf-value="'sale'">PUERTO AYACUCHO</option>
-                                        </select>
+                                                <optgroup label="Destinatario" class="control-label" for="ciudad_destinatario">Destinatario</optgroup><br/>
+                                                <select name="ciudad_remitente" class="form-control link-style">
+                                                    <option t-attf-value="'CARACAS'">CARACAS</option>
+                                                </select>
 
-                                        <label class="control-label" for="oficina_retirar">Oficina a Retirar</label><br/>
-                                        <select name="ciudad_remitente" class="form-control link-style">
-                                            <t t-foreach="pruebas" t-as="c">
-                                                <option t-esc="c.name" t-att-value="c.id" />
-                                            </t>
-                                        </select>
+                                                <optgroup label="Oficina a Retirar" class="control-label" for="oficina_retirar">Oficina a Retirar</optgroup><br/>
+                                                <select name="ciudad_remitente" class="form-control link-style">
+                                                    <option t-attf-value="'ALIADO ZOOM PROPUESTAS URBANAS'">ALIADO ZOOM PROPUESTAS URBANAS</option>
+                                                    <option t-attf-value="'ALIADO ZOOM REPRESENTACIONES SIGMA 256'">ALIADO ZOOM REPRESENTACIONES SIGMA 256</option>
+                                                    <option t-attf-value="'ALIADO ZOOM REPRESENTACIONES SRV 14'">ALIADO ZOOM REPRESENTACIONES SRV 14</option>
+                                                    <option t-attf-value="'ALIADO ZOOM SHIPNET MANZANARES'">ALIADO ZOOM SHIPNET MANZANARES</option>
+                                                    <option t-attf-value="'ZOOM LA URBINA'">ZOOM LA URBINA</option>
+                                                    <option t-attf-value="'ZOOM  MAKRO LA YAGUARA'">ZOOM  MAKRO LA YAGUARA</option>
+                                                    <option t-attf-value="'ZOOM BELLO CAMPO'">ZOOM BELLO CAMPO</option>
+                                                    <option t-attf-value="'ZOOM CDO CATIA'">ZOOM CDO CATIA</option>
+                                                    <option t-attf-value="'VZOOM CHACAITO I'">VZOOM CHACAITO I</option>
+                                                    <option t-attf-value="'ZOOM LA CALIFORNIA'">ZOOM LA CALIFORNIA</option>
+                                                    <option t-attf-value="'ZOOM PARQUE HUMBOLDT'">ZOOM PARQUE HUMBOLDT</option>
+                                                    <option t-attf-value="'ZOOM SAN MARTIN'">ZOOM SAN MARTIN</option>
+                                                    <option t-attf-value="'ALIADO ZOOM  MORGAF INVERSIONES 777'">ALIADO ZOOM  MORGAF INVERSIONES 777</option>
+                                                    <option t-attf-value="'ALIADO ZOOM CORPORACION ZANESIL'">ALIADO ZOOM DIGITAL PARAISO</option>
+                                                    <option t-attf-value="'ALIADO ZOOM ENCOMIENDAS GALLERY 55'">ALIADO ZOOM ENCOMIENDAS GALLERY 55</option>
+                                                    <option t-attf-value="'ALIADO ZOOM GRUPO FIGUE, C.A. AV LIBERTADOR.'">ALIADO ZOOM GRUPO FIGUE, C.A. AV LIBERTADOR.</option>
 
-                                        <label class="control-label" for="cantidad_piezas">Cantidad de piezas</label><br/>
-                                        <input type="text" class="form-control" id="cantidad_piezas"/>
+                                                </select>
 
-                                        <label class="control-label" for="peso">Peso</label><br/>
-                                        <input type="text" class="form-control" id="peso"/>
+                                                <optgroup label=">Cantidad de piezas" class="control-label" for="cantidad_piezas">Cantidad de piezas</optgroup><br/>
+                                                <input type="text" class="form-control" id="cantidad_piezas"/>
 
-                                        <label class="control-label" for="persona_contacto">Persona de Contacto</label><br/>
-                                        <input type="text" class="form-control" id="persona_contacto"/>
+                                                <optgroup label=">Peso" class="control-label" for="peso">Peso</optgroup><br/>
+                                                <input type="text" class="form-control" id="peso"/>
 
-                                        <label class="control-label" for="rif_ci_pa">Rif/CI/PA</label><br/>
-                                        <input type="text" class="form-control" id="rif_ci_pa"/>
+                                                <optgroup label="Persona de Contacto" class="control-label" for="persona_contacto">Persona de Contacto</optgroup><br/>
+                                                <input type="text" class="form-control" id="persona_contacto"/>
 
-                                        <label class="control-label" for="celular">celular</label><br/>
-                                        <input type="text" class="form-control" id="celular"/>
+                                                <optgroup label="Rif/CI/PA" class="control-label" for="rif_ci_pa">Rif/CI/PA</optgroup><br/>
+                                                <input type="text" class="form-control" id="rif_ci_pa"/>
 
-                                        <label class="control-label" for="telefono">telefono</label><br/>
-                                        <input type="text" class="form-control" id="telefono"/>
+                                                <label class="control-label" for="celular">celular</label><br/>
+                                                <input type="text" class="form-control" id="celular"/>
 
-                                        <div class "clearfix oe_login_buttons">
-                                            <button type="sudmit" class="btn btn-primary pull-left">Consultar</button>
-                                        </div> 
+                                                <label class="control-label" for="telefono">telefono</label><br/>
+                                                <input type="text" class="form-control" id="telefono" />
+                                                <br/>
+                                                <div class="mypanel"></div>
+                                                <div>
+                                                    <button type="sudmit" id="o_consultar_form_pay" class="btn btn-primary pull-left">Consultar
+                                                    </button>
+                                                </div> 
+                                            </ul>
+                                        </nav>
                                     </div>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <!-- vista -->
-        <record id="inherit_view_id_inherit_module_name" model="ir.ui.view">
+        <!--record id="inherit_view_id_inherit_module_name" model="ir.ui.view">
           <field name="name">delivery.carrier.view.form.inherit</field>
           <field name="model">delivery.carrier</field>
           <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
@@ -12,7 +12,7 @@
               <field name="codigo_cliente"/>    
             </field>
           </field>
-        </record>
+        </record-->
 
     </data>
 </odoo>

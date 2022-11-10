@@ -28,7 +28,7 @@
         'views/views.xml',
         'views/sale.xml',
         'views/stock.xml',
-        'views/template.xml',
+        #'views/template.xml',
         'data/data.xml',
         'wizard/agregar_metodo.xml',
         'wizard/generar_guia.xml',

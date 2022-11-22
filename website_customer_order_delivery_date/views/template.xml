@@ -24,16 +24,19 @@
                                 </div>
                             </div>
                          </div>
-                         <t t-if="website and not website.is_customer_order_delivery_comment_feature">
-                            <div class="row">
-                                <div class='col-sm-6'>
+                        <t t-if="website and not website.is_customer_order_delivery_comment_feature">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Dropdown button
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <div class="form-group">
-                                        
+                                                                            
                                         <label class="control-label" for="ciudad_remitente">Remitente</label><br/>
                                         <select name="ciudad_remitente" class="form-control link-style">
                                             <option t-attf-value="'Valencia'">Valencia</option>
                                         </select>
-
+                            
                                         <label class="control-label" for="ciudad_destinatario">Destinatario</label><br/>
                                         <select name="ciudad_remitente" class="form-control link-style">
                                             <option t-attf-value="'CARACAS'">CARACAS</option>
@@ -47,27 +50,27 @@
                                             <option t-attf-value="'VALLE DE LA PASCUA'">VALLE DE LA PASCUA</option>
                                             <option t-attf-value="'PUERTO AYACUCHO'">PUERTO AYACUCHO</option>
                                         </select>
-
+                            
                                         <label class="control-label" for="oficina_retirar">Oficina a Retirar</label><br/>
                                         <select name="ciudad_remitente" class="form-control link-style">
                                             <option t-attf-value="'Valencia'">Valencia</option>
                                         </select>
-
+                            
                                         <label class="control-label" for="cantidad_piezas">Cantidad de piezas</label><br/>
                                         <input type="text" class="form-control" id="cantidad_piezas"/>
-
+                            
                                         <label class="control-label" for="peso">Peso</label><br/>
                                         <input type="text" class="form-control" id="peso"/>
-
+                            
                                         <label class="control-label" for="persona_contacto">Persona de Contacto</label><br/>
                                         <input type="text" class="form-control" id="persona_contacto"/>
-
+                            
                                         <label class="control-label" for="rif_ci_pa">Rif/CI/PA</label><br/>
                                         <input type="text" class="form-control" id="rif_ci_pa"/>
-
+                            
                                         <label class="control-label" for="celular">celular</label><br/>
                                         <input type="text" class="form-control" id="celular"/>
-
+                            
                                         <label class="control-label" for="telefono">telefono</label><br/>
                                         <input type="text" class="form-control" id="telefono" />
                                         <br/>
@@ -79,10 +82,81 @@
                                     </div>
                                 </div>
                             </div>
-                         </t>
+                        </t>
                     </div>
                 </div>
             </t>
         </xpath>
     </template>
 </odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="form-group">
+                                                
+            <label class="control-label" for="ciudad_remitente">Remitente</label><br/>
+            <select name="ciudad_remitente" class="form-control link-style">
+                <option t-attf-value="'Valencia'">Valencia</option>
+            </select>
+
+            <label class="control-label" for="ciudad_destinatario">Destinatario</label><br/>
+            <select name="ciudad_remitente" class="form-control link-style">
+                <option t-attf-value="'CARACAS'">CARACAS</option>
+                <option t-attf-value="'VALENCIA'">VALENCIA</option>
+                <option t-attf-value="'MARACAY'">MARACAY</option>
+                <option t-attf-value="'ZULIA'">ZULIA</option>
+                <option t-attf-value="'CABIMAS'">CABIMAS</option>
+                <option t-attf-value="'Sucre'">Sucre</option>
+                <option t-attf-value="'PUERTO ORDAZ'">PUERTO ORDAZ</option>
+                <option t-attf-value="'SAN ANTONIO DEL TACHIRA'">SAN ANTONIO DEL TACHIRA</option>
+                <option t-attf-value="'VALLE DE LA PASCUA'">VALLE DE LA PASCUA</option>
+                <option t-attf-value="'PUERTO AYACUCHO'">PUERTO AYACUCHO</option>
+            </select>
+
+            <label class="control-label" for="oficina_retirar">Oficina a Retirar</label><br/>
+            <select name="ciudad_remitente" class="form-control link-style">
+                <option t-attf-value="'Valencia'">Valencia</option>
+            </select>
+
+            <label class="control-label" for="cantidad_piezas">Cantidad de piezas</label><br/>
+            <input type="text" class="form-control" id="cantidad_piezas"/>
+
+            <label class="control-label" for="peso">Peso</label><br/>
+            <input type="text" class="form-control" id="peso"/>
+
+            <label class="control-label" for="persona_contacto">Persona de Contacto</label><br/>
+            <input type="text" class="form-control" id="persona_contacto"/>
+
+            <label class="control-label" for="rif_ci_pa">Rif/CI/PA</label><br/>
+            <input type="text" class="form-control" id="rif_ci_pa"/>
+
+            <label class="control-label" for="celular">celular</label><br/>
+            <input type="text" class="form-control" id="celular"/>
+
+            <label class="control-label" for="telefono">telefono</label><br/>
+            <input type="text" class="form-control" id="telefono" />
+            <br/>
+            <div class="mypanel"></div>
+            <div>
+                <button type="sudmit" id="o_payment_form_pay_2" class="btn btn-primary pull-left">Consultar
+                </button>
+            </div>
+        </div>
+    </div>
+  </div-->

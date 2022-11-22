@@ -42,8 +42,8 @@ odoo.define('website_customer_order_delivery_date.payment', function(require) {
                  
 
 
-                $(".mypanel").html(function getRandom() {
-                    return Math.random();
+                $('#order_delivery .monetary_field').html(function getRandom() {
+                    return Math.random(1);
                   })
             
             

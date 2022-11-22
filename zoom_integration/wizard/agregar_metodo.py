@@ -2,13 +2,14 @@
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
+from odoo.exceptions import ValidationError
 from odoo.osv import expression
 from requests import post
 import requests
 import json
 
-class ZoomSaleOrder(models.Model):
-    _name = 'sale.order.zoom'
+class ZoomSaleOrder(models.TransientModel):
+    _inherit = 'choose.delivery.carrier'
 
     coste = fields.Char()
     mansaje = fields.Char()
@@ -71,19 +72,24 @@ class ZoomSaleOrder(models.Model):
         #self.coste = prueba['entidadRespuesta']['total']
         print(len(mensaje['entidadRespuesta']))
         coste = mensaje['entidadRespuesta']['total']
-        self.coste = coste
+        self.display_price = float(coste.replace(',',''))
+        self.delivery_price = float(coste.replace(',',''))
+        self.order_id.write({
+            'metodo': "Zoom Nacional",
+            'ciudad': self.ciudad_destinatario.name,
+            'oficina': self.oficina_retirar.name,
+            'localidad': self.ciudad_remitente.name,
+            'rif_ci_pa': self.rif_ci_pa,
+            'celular': self.celular,
+            'telefono': self.telefono,
+            'costo': float(coste.replace(',','')),
+        })
+        
+        #enviar data a formulario
             
         #except Exception as err:
         #    print(err)
-        return self.show_view('Generado', self._name, 'zoom_integration.sale_agregar_metodo_envio_view_form', self.id)        
-    
-    
-    
-    
-    
-    def guardar(self):
-        return True
-            
+        return self.show_view('Generado', self._name, 'delivery.choose_delivery_carrier_view_form', self.id)        
             
     def show_view(self, name, model, id_xml, res_id=None, view_mode='tree,form', nodestroy=True, target='new'):
         context = self._context

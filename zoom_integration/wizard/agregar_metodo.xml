@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="sale_agregar_metodo_envio_view_form" model="ir.ui.view">
+    <!--record id="sale_agregar_metodo_envio_view_form" model="ir.ui.view">
         <field name="name">sale.agregar.metodo.envio.form</field>
         <field name="model">sale.order.zoom</field>
         <field name="arch" type="xml">
@@ -40,7 +40,7 @@
                 </footer>
             </form>
         </field>
-    </record>
+    </record-->
 
     <!--record id="sale_agregar_metodo_envio_action" model="ir.actions.act_window">
         <field name="name">Enter Promotion or Coupon Code</field>
@@ -49,4 +49,39 @@
         <field name="target">new</field>
         <field name="view_id" ref="sale_coupon_apply_code_view_form"/>
      </record-->
+
+    <record id="inherit_view_id_inherit_choose_delivery_carrier" model="ir.ui.view">
+        <field name="name">choose.delivery.carrier.view.form.inherit</field>
+        <field name="model">choose.delivery.carrier</field>
+        <field name="inherit_id" ref="delivery.choose_delivery_carrier_view_form"/>
+        <field name="arch" type="xml">
+            <field name="carrier_id" position="after">
+                <group>
+                    <field name="metodo" string="Tipo de Tarifa" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="ciudad_destinatario" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    
+                    <field name="oficina_retirar" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="ciudad_remitente" string="Localidad" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="modalidad_tarifa" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="tipo_envio" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="cantidad_piezas" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="peso" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+
+                    
+                    
+                    <field name="persona_contacto" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="rif_ci_pa" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="celular" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                    <field name="telefono" attrs="{'invisible': [('carrier_id', '!=', 11)]}"/>
+                </group>
+                <group >
+                    
+                        <button class="oe_stat_button" type="object" string="Obtener Tarifa" name="obtener_tarifa" attrs="{'invisible': [('carrier_id', '!=', 11)]}"
+                            icon="fa-pencil-square-o">
+                        </button>
+                    
+                </group>
+            </field>
+        </field>
+    </record>
 </odoo>

@@ -4,6 +4,8 @@
 	<data noupdate="1">
     <!--TIPOS DE TARIFA-->
 
+
+
 		
         <record id="getTipoTarifa1" model="zoom.gettipotarifa">
 		    <field name="code">1</field>
